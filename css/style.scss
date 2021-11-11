@@ -29,6 +29,12 @@ body {
 .offline {
   background-color: #c4c4c4;
 }
+.alert-dismissible .close {
+  right: auto;
+  left: 0;
+  outline: none;
+  opacity: 1;
+}
 .online {
   background-color: #2ecc71;
 }
@@ -44,9 +50,9 @@ body {
     justify-content: center;
     font-weight: bold;
   }
-  @media(max-width:991px){
+  @media (max-width: 991px) {
     display: block !important;
-    div{
+    div {
       margin: 0 auto 16px;
     }
   }
@@ -350,6 +356,27 @@ body {
   padding: 24px 0;
   .container {
     height: 100%;
+    .login-alert {
+      .alert {
+        background-color: #ffb446;
+        color: #fff;
+        padding: 16px;
+        @media (max-width: 574px) {
+          font-size: 13px;
+          padding-inline-end: 45px;
+        }
+        svg {
+          margin-inline-end: 5px;
+        }
+        a {
+          color: $mainColor;
+          text-decoration: none;
+          font-weight: bold;
+          display: inline-block;
+          margin: 0 5px;
+        }
+      }
+    }
   }
   .carousel-inner,
   .carousel-item,
@@ -374,7 +401,7 @@ body {
   padding: 50px 0;
   h2 {
     font-weight: bold;
-    @media(max-width:575px){
+    @media (max-width: 575px) {
       font-size: 18px;
     }
   }
@@ -400,7 +427,7 @@ body {
   position: absolute;
   top: -85px;
   left: 0;
-  @media(max-width:575px){
+  @media (max-width: 575px) {
     top: -75px !important;
   }
 }
@@ -575,20 +602,20 @@ body {
   h2 {
     font-weight: bold;
     margin-bottom: 32px;
-    @media(max-width:575px){
+    @media (max-width: 575px) {
       font-size: 18px;
     }
   }
   .nav-tabs {
     padding: 0;
     border: none;
-    @media(max-width:991px){
+    @media (max-width: 991px) {
       flex-wrap: nowrap;
       overflow-x: auto;
       &::-webkit-scrollbar {
         display: none !important;
       }
-      .nav-link{
+      .nav-link {
         min-width: 130px;
         text-align: center;
       }
@@ -608,10 +635,10 @@ body {
   }
   .owl-nav {
     top: -60px;
-    @media(max-width:991px){
+    @media (max-width: 991px) {
       top: -145px !important;
     }
-    @media(max-width:575px){
+    @media (max-width: 575px) {
       top: -135px !important;
     }
   }
@@ -710,13 +737,13 @@ footer {
   &::-webkit-scrollbar {
     width: 5px;
   }
-  
+
   /* Track */
   &::-webkit-scrollbar-track {
     background: #fff;
     border-radius: 8px;
   }
-  
+
   /* Handle */
   &::-webkit-scrollbar-thumb {
     background: #eee;
@@ -778,7 +805,7 @@ footer {
       p {
         font-size: 14px;
         margin: 0;
-        i{
+        i {
           font-size: 15px;
           margin-inline-end: 5px;
         }
@@ -787,34 +814,33 @@ footer {
   }
 }
 
-/*all-cities*/ 
-.all-cities{
-  h4{
+/*all-cities*/
+.all-cities {
+  h4 {
     font-size: 16px;
-    margin-bottom:12px;
-    i{
+    margin-bottom: 12px;
+    i {
       margin-inline-end: 5px;
-  
     }
   }
-  
 }
-.search-items.show-city,.search-items.show-cats{
+.search-items.show-city,
+.search-items.show-cats {
   display: block;
-  top:100%
+  top: 100%;
 }
-.logged-user{
-  svg{
+.logged-user {
+  svg {
     margin-left: 12px;
   }
-  .dropdown{
-    button{
+  .dropdown {
+    button {
       background-color: transparent;
       border: none;
-      padding:0;
+      padding: 0;
       box-shadow: none !important;
       position: relative;
-      .active-user{
+      .active-user {
         position: absolute;
         right: 0;
         width: 10px;
@@ -822,28 +848,27 @@ footer {
         border-radius: 50%;
         background-color: #1dd11d;
       }
-      &::after{
+      &::after {
         display: none;
       }
-     
-      img{
+
+      img {
         border-radius: 50%;
       }
     }
-    .dropdown-menu{
+    .dropdown-menu {
       text-align: start;
-      padding:8px;
+      padding: 8px;
       min-width: 200px;
-      .dropdown-item{
+      .dropdown-item {
         border-bottom: 1px solid #eee;
         display: flex;
         align-items: center;
-        padding: 8px 0 ;
+        padding: 8px 0;
       }
-      .dropdown-item:last-of-type{
+      .dropdown-item:last-of-type {
         border: none;
       }
     }
   }
- 
 }
